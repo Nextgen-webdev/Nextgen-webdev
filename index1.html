@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Web Developers — Websites That Grow Your Business</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <!-- Footer styles (namespaced, safe — no overlaps with style.css) -->
+    <link rel="stylesheet" href="footer1.css">
+</head>
+
+<body>
+    <!-- ==================== NAVBAR ==================== -->
+    <div class="navbar-wrapper" id="navbar">
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="university-name">NextGen Web</span>
+                    <span class="tagline">Developers</span>
+                </div>
+            </a>
+
+            <!-- Right Section -->
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#technologies">Technologies</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <p id="searchBtn">
+
+                </p>
+
+                <!-- Hamburger (right side, visible on small screens) -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ==================== MOBILE SIDEBAR ==================== -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <aside class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="university-name" style="font-size:1rem;">NextGen Web</span>
+                    <span class="tagline">Developers</span>
+                </div>
+            </a>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li><a href="#home" class="active"><span><i class="fas fa-home"
+                            style="margin-right:12px;color:#00E5A8;"></i>Home</span></a></li>
+
+           <li><a href="#services"><span><i class="fas fa-layer-group" style="margin-right:12px;color:#00E5A8;"></i>Services</span></a></li>
+
+            <li><a href="projects.html"><span><i class="fas fa-briefcase"
+                            style="margin-right:12px;color:#00E5A8;"></i>Projects</span></a></li>
+            <li><a href="#technologies"><span><i class="fas fa-code" style="margin-right:12px;color:#00E5A8;"></i>Technologies</span></a>
+            </li>
+            <li><a href="#contact"><span><i class="fas fa-envelope"
+                            style="margin-right:12px;color:#00E5A8;"></i>Contact</span></a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="https://wa.me/923114332292?text=Hello%20NextGen%20Web%20Developers!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                target="_blank" class="apply-btn"><i class="fas fa-paper-plane"></i> Get a Free Quote</a>
+            <div class="sidebar-socials">
+                <a href="https://www.facebook.com/profile.php?id=61590948110156" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ==================== SEARCH OVERLAY ==================== -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="close-search" id="closeSearch" aria-label="Close search">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="Search services, projects, pricing...">
+                <button aria-label="Submit search"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="search-suggestions">
+                <span>Popular:</span>
+                <a href="#services">E-commerce Store</a>
+                <a href="#services">Business Website</a>
+                <a href="#services">POS System</a>
+                <a href="#services">Landing Page</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== HERO (sticky — next section slides over it) ==================== -->
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline class="hero-video"
+            poster="https://images.pexels.com/videos/11274341/code-css-html-javascript-11274341.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200">
+            <source src="https://videos.pexels.com/video-files/11274341/11274341-uhd_3840_2160_25fps.mp4"
+                type="video/mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <!-- Availability badge -->
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Available for new projects
+                </div>
+
+                <!-- Tagline -->
+                <span class="hero-tagline">// NEXTGEN WEB DEVELOPERS</span>
+
+                <!-- Heading -->
+                <h1 class="hero-heading">
+                    <span class="heading-line">Modern Websites Built To</span><br>
+                    <span class="heading-line hero-accent" id="typedText">Convert Visitors Into Customers</span><span
+                        class="typed-cursor"></span>
+                </h1>
+
+                <!-- Description -->
+                <p class="hero-description">
+                    We design and build fast, responsive, and SEO-ready websites that help
+                    businesses grow online — from sleek landing pages to full e-commerce stores
+                    and custom web applications.
+                </p>
+
+                <!-- Buttons -->
+                <div class="hero-actions">
+                    <a href="https://wa.me/923114332292?text=Hello%20NextGen%20Web%20Developers!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                        target="_blank" class="hero-btn primary-btn" style="text-decoration: none;"><i
+                            class="fas fa-phone"></i> Chat on WhatsApp</a>
+                    <a href="projects.html" class="hero-btn ghost-btn" style="text-decoration: none;"><i
+                            class="fas fa-eye"></i> View Our Work</a>
+                </div>
+
+                <!-- Stats row (trust building) -->
+                <div class="hero-stats">
+                    <div>
+                        <h3>20+</h3>
+                        <span>Projects</span>
+                    </div>
+                    <div>
+                        <h3>5+</h3>
+                        <span>Technologies</span>
+                    </div>
+                    <div>
+                        <h3>100%</h3>
+                        <span>Responsive</span>
+                    </div>
+                    <div>
+                        <h3>24/7</h3>
+                        <span>Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            Scroll
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 2 — SERVICES (slides over the hero) ==================== -->
+    <section class="services-section" id="services">
+        <div class="services-inner">
+            <div class="section-header">
+                <span class="section-label">// WHAT WE DO</span>
+                <h2>Websites Designed to <span class="hero-accent">Grow Your Business</span></h2>
+                <p>We build modern, fast, and responsive websites tailored to your needs.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Business Websites</h3>
+                    <p>Professional websites for shops, agencies, and local businesses that build trust and attract new
+                        customers.</p>
+                    <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 2 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>E-Commerce Stores</h3>
+                    <p>Sell products online with secure payments, inventory management, and a smooth checkout
+                        experience.</p>
+                    <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>SEO & Optimization</h3>
+                    <p>Improve visibility on search engines and help more customers find your business online.</p>
+                    <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 4 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Custom Web Applications</h3>
+                    <p>Dashboards, portals, booking systems, and management tools built around your workflow.</p>
+                    <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 5 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Responsive Design</h3>
+                    <p>Websites that look great and work perfectly on mobile, tablet, and desktop devices.</p>
+                    <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 6 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Ongoing updates, backups, security monitoring, and technical assistance whenever you need it.</p>
+                    <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- -------------------------section 3 ----------------------------------------------- -->
+    <!-- ==================== SECTION 3 — TECHNOLOGIES (light, slides over) ==================== -->
+    <section class="tech-section" id="technologies">
+        <div class="tech-inner">
+            <!-- Left — Visual -->
+            <div class="tech-visual tech-reveal">
+                <div class="tech-visual-bg"></div>
+                <img src="https://images.pexels.com/photos/574073/pexels-photo-574073.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    alt="Web development workspace with code on screen" class="tech-laptop-img">
+
+                <!-- Floating cards -->
+                <div class="float-card float-card-1">
+                    <div class="fc-icon fc-green"><i class="fas fa-code"></i></div>
+                    <div>
+                        <div>Clean Code</div>
+                        <div class="fc-stat">SEO-optimized structure</div>
+                    </div>
+                </div>
+
+                <div class="float-card float-card-2">
+                    <div class="fc-icon fc-blue"><i class="fas fa-tachometer-alt"></i></div>
+                    <div>
+                        <div>99 / 100</div>
+                        <div class="fc-stat">PageSpeed Score</div>
+                    </div>
+                </div>
+
+                <div class="float-card float-card-3">
+                    <div class="fc-icon fc-purple"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <div>SSL Secured</div>
+                        <div class="fc-stat">End-to-end encryption</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right — Content -->
+            <div class="tech-content tech-reveal" style="transition-delay: 0.15s;">
+                <span class="tech-label">// Technologies We Use</span>
+                <h2 class="tech-heading">Technologies We Use<br>To Build <span class="accent">Modern Solutions</span>
+                </h2>
+                <p class="tech-desc">We use the latest and most reliable technologies to build fast, secure, and
+                    scalable
+                    web solutions tailored to every project.</p>
+
+                <div class="tech-grid">
+                    <div class="tech-row">
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"
+                                alt="Django">
+                            <span>Django</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                                alt="Laravel">
+                            <span>Laravel</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                alt="Python">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="tech-row">
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                                alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                                alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                                alt="Bootstrap">
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                                alt="Git">
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- ==================== SECTION 4 — WHY CHOOSE US ==================== -->
+
+    <section class="why-section" id="why">
+        <div class="why-inner">
+            <div class="why-header section-header">
+                <span class="section-label">// Why Choose Us</span>
+                <h2>Built Different.<br><span class="hero-accent">Engineered for Results.</span></h2>
+                <p>We don't just build websites — we engineer digital experiences that drive growth, build trust, and
+                    outperform your competition.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Card 1: Large left -->
+                <div class="bento-card bento-1" data-pop>
+                    <span class="bento-label">Performance First</span>
+                    <h3>Lightning-Fast Websites That Google Loves</h3>
+                    <p>Every site we build scores 95+ on Google PageSpeed. Faster load times mean better rankings, lower
+                        bounce rates, and more conversions.</p>
+                    <div class="bento-1-deco">
+                        <span class="circuit-line cl-h1"></span>
+                        <span class="circuit-line cl-h2"></span>
+                        <span class="circuit-line cl-v1"></span>
+                        <span class="circuit-line cl-v2"></span>
+                        <span class="circuit-dot cd-1"></span>
+                        <span class="circuit-dot cd-2"></span>
+                        <span class="circuit-dot cd-3"></span>
+                        <div class="circuit-icon"><i class="fas fa-bolt"></i></div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Middle -->
+                <div class="bento-card bento-2" data-pop>
+                    <div>
+                        <h3>Pixel-Perfect Design</h3>
+                        <p style="max-width:100%;">Every element is crafted with precision — from typography to spacing
+                            —
+                            for a premium look.</p>
+                    </div>
+                    <div class="dot-matrix">
+                        <span class="dot"></span><span class="dot glow"></span><span class="dot"></span><span
+                            class="dot"></span><span class="dot"></span><span class="dot bright"></span><span
+                            class="dot"></span><span class="dot"></span>
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span
+                            class="dot glow"></span><span class="dot"></span><span class="dot"></span><span
+                            class="dot"></span><span class="dot glow"></span>
+                        <span class="dot glow"></span><span class="dot"></span><span class="dot bright"></span><span
+                            class="dot"></span><span class="dot"></span><span class="dot"></span><span
+                            class="dot glow"></span><span class="dot"></span>
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span
+                            class="dot"></span><span class="dot glow"></span><span class="dot"></span><span
+                            class="dot"></span><span class="dot bright"></span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Right flush -->
+                <div class="bento-card bento-3" data-pop>
+                    <div class="bento-3-float-icon"><i class="fas fa-layer-group"></i></div>
+                    <div style="padding-right:20px;">
+                        <h3>Scalable Architecture</h3>
+                        <p style="max-width:100%;">Built to grow with your business — add features, pages, and
+                            integrations
+                            without rebuilding.</p>
+                    </div>
+                    <div class="bento-3-deco">
+                        <div class="gradient-bar"></div>
+                        <div class="thin-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Large bottom left -->
+                <div class="bento-card bento-4" data-pop>
+                    <h3>End-to-End Development & Deployment</h3>
+                    <p>From wireframe to live launch — we handle design, development, hosting setup, domain
+                        configuration,
+                        and post-launch support. One team. Zero gaps.</p>
+                    <div class="bento-4-glow"></div>
+                    <div class="bento-4-deco">
+                        <div class="deco-dots">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="deco-circuit-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Bottom right -->
+                <div class="bento-card bento-5" data-pop>
+                    <div class="bento-5-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <h3>Secure & Reliable</h3>
+                        <p style="max-width:100%;">SSL certificates, regular backups, malware protection, and 99.9%
+                            uptime —
+                            your site is always safe and online.</p>
+                    </div>
+                    <div class="bento-5-glow"></div>
+                    <div class="bento-5-deco">
+                        <div class="mini-grid">
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------------------- -->
+  
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- ==================== OUR PROCESS SECTION ==================== -->
+    <section class="process-section" id="process">
+        <div class="ghost-text">PROCESS</div>
+
+        <div class="process-inner">
+            <!-- Header -->
+            <div class="section-header">
+                <span class="section-label">// Our Process</span>
+                <h2>A Process Built On<br><span class="accent">Transparency</span></h2>
+                <p>From idea to launch, we follow a clear and proven process to deliver results you can count on.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline" id="timeline">
+                <!-- STEP 1 -->
+                <div class="step" data-step="1">
+                    <div class="step-main">
+                        <div class="step-circle"><span>01</span></div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="connector" data-connector="1">
+                        <div class="base"></div>
+                        <div class="fill"></div>
+                        <div class="spark"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Discovery</div>
+                        <div class="step-icon"><i class="fas fa-search"></i></div>
+                        <p class="step-desc">We understand your business, goals, and target audience to define the
+                            right
+                            solution.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="step" data-step="2">
+                    <div class="step-main">
+                        <div class="step-circle"><span>02</span></div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="connector" data-connector="2">
+                        <div class="base"></div>
+                        <div class="fill"></div>
+                        <div class="spark"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Design</div>
+                        <div class="step-icon"><i class="fas fa-pen-nib"></i></div>
+                        <p class="step-desc">We create wireframes and UI/UX designs that are modern, intuitive, and
+                            user-focused.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="step" data-step="3">
+                    <div class="step-main">
+                        <div class="step-circle"><span>03</span></div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="connector" data-connector="3">
+                        <div class="base"></div>
+                        <div class="fill"></div>
+                        <div class="spark"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Development</div>
+                        <div class="step-icon"><i class="fas fa-code"></i></div>
+                        <p class="step-desc">We bring the design to life with clean, efficient code and the latest
+                            technologies.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="step" data-step="4">
+                    <div class="step-main">
+                        <div class="step-circle"><span>04</span></div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="connector" data-connector="4">
+                        <div class="base"></div>
+                        <div class="fill"></div>
+                        <div class="spark"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Testing</div>
+                        <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+                        <p class="step-desc">We test every feature thoroughly to ensure performance, security, and
+                            reliability.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 5 (no connector after) -->
+                <div class="step" data-step="5">
+                    <div class="step-main">
+                        <div class="step-circle"><span>05</span></div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Launch</div>
+                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                        <p class="step-desc">Once everything is perfect, we launch your project and help you go live
+                            with
+                            confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="testimonials-section" id="testimonials">
+        <!-- Decorative elements -->
+        <div class="t-glow-1"></div>
+        <div class="t-glow-2"></div>
+        <div class="t-grid-pattern"></div>
+        <div class="t-circle-outline oc1"></div>
+        <div class="t-circle-outline oc2"></div>
+        <span class="t-particle" style="width:5px; height:5px; top:16%; left:14%; animation-delay:0s;"></span>
+        <span class="t-particle" style="width:4px; height:4px; top:70%; left:8%; animation-delay:1.2s;"></span>
+        <span class="t-particle" style="width:6px; height:6px; top:22%; right:20%; animation-delay:0.6s;"></span>
+        <span class="t-particle" style="width:3px; height:3px; bottom:16%; right:12%; animation-delay:2s;"></span>
+
+        <div class="testimonials-inner">
+            <div class="t-header">
+                <span class="t-label">// TESTIMONIALS</span>
+                <h2>What <span class="accent">Clients</span> Say About Working With Us</h2>
+                <p>Trusted by businesses looking for modern, high-quality digital solutions.</p>
+            </div>
+
+            <div class="t-slider-viewport">
+                <div class="t-slider-track" id="tSliderTrack">
+
+                    <!-- SLIDE GROUP 1 -->
+                    <div class="t-slide-group">
+                        <div class="t-card size-medium" data-reveal>
+                            <div class="t-card-top">
+                                <div class="t-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="t-quote-icon"><i class="fas fa-quote-right"></i></div>
+                            </div>
+                            <p class="t-quote-text">"Professional work and excellent communication throughout the
+                                project. They understood exactly what our restaurant needed."</p>
+                            <div class="t-client">
+                                <div class="t-avatar" style="background: linear-gradient(135deg,#00E5A8,#00BFA5);">AK
+                                </div>
+                                <div class="t-client-info">
+                                    <span class="t-name">Ahmed Khan</span>
+                                    <span class="t-role">Restaurant Owner</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="t-card size-large" data-reveal>
+                            <div class="t-card-top">
+                                <div class="t-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="t-quote-icon"><i class="fas fa-quote-right"></i></div>
+                            </div>
+                            <p class="t-quote-text">"Exceeded expectations and delivered a clean, modern website that
+                                perfectly represents our fashion brand. The attention to detail in every page,
+                                animation, and product layout was outstanding — our online sales have grown
+                                significantly since launch."</p>
+                            <div class="t-client">
+                                <div class="t-avatar" style="background: linear-gradient(135deg,#00BFA5,#00E5A8);">SA
+                                </div>
+                                <div class="t-client-info">
+                                    <span class="t-name">Sarah Ali</span>
+                                    <span class="t-role">Fashion Brand</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="t-card size-small" data-reveal>
+                            <div class="t-card-top">
+                                <div class="t-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="t-quote-icon"><i class="fas fa-quote-right"></i></div>
+                            </div>
+                            <p class="t-quote-text">"Fast delivery and great attention to detail."</p>
+                            <div class="t-client">
+                                <div class="t-avatar" style="background: linear-gradient(135deg,#00E5A8,#0ABAB5);">BH
+                                </div>
+                                <div class="t-client-info">
+                                    <span class="t-name">Bilal Hassan</span>
+                                    <span class="t-role">Dental Clinic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE GROUP 2 -->
+                    <div class="t-slide-group">
+                        <div class="t-card size-small" data-reveal>
+                            <div class="t-card-top">
+                                <div class="t-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="t-quote-icon"><i class="fas fa-quote-right"></i></div>
+                            </div>
+                            <p class="t-quote-text">"Smooth experience from start to finish."</p>
+                            <div class="t-client">
+                                <div class="t-avatar" style="background: linear-gradient(135deg,#00BFA5,#00E5A8);">MU
+                                </div>
+                                <div class="t-client-info">
+                                    <span class="t-name">Muhammad Umar</span>
+                                    <span class="t-role">Real Estate Agency</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="t-card size-large" data-reveal>
+                            <div class="t-card-top">
+                                <div class="t-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="t-quote-icon"><i class="fas fa-quote-right"></i></div>
+                            </div>
+                            <p class="t-quote-text">"Highly recommended for businesses looking for quality solutions.
+                                From the very first call, the team was transparent about timelines and pricing, and
+                                they
+                                delivered exactly what was promised — on time and within budget."</p>
+                            <div class="t-client">
+                                <div class="t-avatar" style="background: linear-gradient(135deg,#00E5A8,#00BFA5);">FN
+                                </div>
+                                <div class="t-client-info">
+                                    <span class="t-name">Fatima Noor</span>
+                                    <span class="t-role">Beauty Salon</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="t-card size-medium" data-reveal>
+                            <div class="t-card-top">
+                                <div class="t-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="t-quote-icon"><i class="fas fa-quote-right"></i></div>
+                            </div>
+                            <p class="t-quote-text">"Our e-commerce store looks premium now and checkout is so much
+                                faster. Customers keep complimenting the design."</p>
+                            <div class="t-client">
+                                <div class="t-avatar" style="background: linear-gradient(135deg,#0ABAB5,#00E5A8);">RJ
+                                </div>
+                                <div class="t-client-info">
+                                    <span class="t-name">Raza Javed</span>
+                                    <span class="t-role">Online Retailer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="t-controls">
+                <button class="t-arrow" id="tPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                <div class="t-dots" id="tDots">
+                    <span class="t-dot active" data-index="0"></span>
+                    <span class="t-dot" data-index="1"></span>
+                </div>
+                <button class="t-arrow" id="tNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------------- -->
+
+
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact-section" id="contact">
+        <!-- Decorative background -->
+        <div class="contact-bg" id="contactBg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="deco-circle deco-circle-1"></div>
+            <div class="deco-circle deco-circle-2"></div>
+            <div class="deco-circle deco-circle-3"></div>
+        </div>
+    
+        <div class="contact-inner">
+            <!-- ========== LEFT ========== -->
+            <div class="contact-left reveal">
+                <span class="section-label">// Get In Touch</span>
+                <h2>Let's Build Something <span class="accent">Amazing Together</span></h2>
+                <p>Tell us about your idea and we'll help turn it into a modern digital experience.</p>
+    
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nextgenwebdev.studio@gmail.com" target="_blank" style="text-decoration:none; color: white;">
+                        <div class="cc-icon"><i class="far fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nextgenwebdev.studio@gmail.com" target="_blank" style="text-decoration:none; color: white;">nextgenwebdev.studio@gmail.com</a>
+                        </a>
+                    </div>
+    
+                    <div class="contact-card">
+                        <a href="https://wa.me/923114332292?text=Hello%20NextGen%20Web%20Developers!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" style="text-decoration:none; color: white;">
+                        <div class="cc-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/923114332292?text=Hello%20NextGen%20Web%20Developers!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" style="text-decoration:none; color: white;">+92 300 1234567</a>
+                        </a>
+                    </div>
+    
+                    <div class="contact-card">
+                        <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Location</h4>
+                        <p>Lahore, Pakistan</p>
+                    </div>
+    
+                    <div class="contact-card">
+                        <div class="cc-icon"><i class="far fa-clock"></i></div>
+                        <h4>Response Time</h4>
+                        <p>Within 24 Hours</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- ========== RIGHT — FORM ========== -->
+            <div class="contact-form-wrap reveal" style="transition-delay: 0.15s;">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" novalidate>
+                    <input type="hidden" name="access_key" value="c7f3c768-5d87-4f28-a81f-154ac81755d2">
+                    <h3>Start a Conversation</h3>
+                    <p>Fill in the details below — we usually reply within a day.</p>
+    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name <span>*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectType">Project Type</label>
+                            <div class="select-wrap">
+                                <select id="projectType" name="projectType">
+                                    <option value="" selected disabled hidden>Select a type</option>
+                                    <option>Business Website</option>
+                                    <option>E-Commerce Store</option>
+                                    <option>Custom Web Application</option>
+                                    <option>POS System</option>
+                                    <option>Landing Page</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea id="message" name="message"
+                            placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                    </div>
+    
+                    <button type="submit" class="submit-btn">
+                        Start Your Project <i class="fas fa-arrow-right"></i>
+                    </button>
+    
+                    <p class="form-note"><i class="fas fa-lock"></i>Your information is safe — we never share your
+                        details.</p>
+                </form>
+    
+                <!-- Success state -->
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon"><i class="fas fa-check"></i></div>
+                    <h4>Message Sent!</h4>
+                    <p>Thanks for reaching out — we'll get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- ==================== FOOTER (namespaced: ngwf-*) ==================== -->
+    <footer class="ngwf-footer">
+        <div class="ngwf-inner">
+            <!-- Top grid -->
+            <div class="ngwf-grid">
+                <!-- LEFT — Brand -->
+                <div class="ngwf-brand ngwf-reveal">
+                    <a href="#" class="ngwf-logo">
+                        <div class="ngwf-logo-icon"><i class="fas fa-code"></i></div>
+                        <div class="ngwf-logo-text">
+                            <span class="ngwf-brand-name">NextGen Web</span>
+                            <span class="ngwf-brand-tag">Developers</span>
+                        </div>
+                    </a>
+                    <p>We create modern websites and digital experiences that help businesses establish a strong online
+                        presence.</p>
+
+                    <div class="ngwf-socials">
+                        <a href="https://www.facebook.com/profile.php?id=61590948110156" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- CENTER — Navigation -->
+                <div class="ngwf-nav ngwf-reveal" style="transition-delay: 0.12s;">
+                    <span class="ngwf-label">// Navigation</span>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#technologies">Technologies</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT — Contact -->
+                <div class="ngwf-contact ngwf-reveal" style="transition-delay: 0.24s;">
+                    <span class="ngwf-label">// Contact</span>
+                    <ul>
+                        <li>
+                            <div class="ngwf-ic"><i class="far fa-envelope"></i></div>
+                            <div class="ngwf-ctext">
+                                <span class="ngwf-clabel">Email</span>
+                                <span class="ngwf-cvalue">nextgenwebdev.studio@gmail.com</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ngwf-ic"><i class="fas fa-phone-alt"></i></div>
+                            <div class="ngwf-ctext">
+                                <span class="ngwf-clabel">Phone</span>
+                                <span class="ngwf-cvalue">+92 311 4332292</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ngwf-ic"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="ngwf-ctext">
+                                <span class="ngwf-clabel">Location</span>
+                                <span class="ngwf-cvalue">Pakistan</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ngwf-ic"><i class="far fa-clock"></i></div>
+                            <div class="ngwf-ctext">
+                                <span class="ngwf-clabel">Response Time</span>
+                                <span class="ngwf-cvalue">Within 24 Hours</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="https://wa.me/923114332292?text=Hello%20NextGen%20Web%20Developers!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                        target="_blank" rel="noopener" class="ngwf-wa-btn">
+                        <i class="fab fa-whatsapp"></i> Let's Talk
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="ngwf-bottom ngwf-reveal" style="transition-delay: 0.35s;">
+                <div class="ngwf-copy">
+                    <span class="ngwf-copy-main">© 2026 <strong>NextGen Web Developers</strong>. All rights
+                        reserved.</span>
+                    <span class="ngwf-copy-sub">Built with <span class="ngwf-heart">❤</span> using <span
+                            class="ngwf-tech">Laravel</span>,
+                        <span class="ngwf-tech">Django</span> and <span class="ngwf-tech">Tailwind CSS</span></span>
+                </div>
+
+                <div class="ngwf-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top (namespaced) -->
+    <button class="ngwf-scrolltop" id="ngwfScrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script1.js"></script>
+    <!-- Footer JS (isolated IIFE — cannot conflict with script.js) -->
+    <script src="footer1.js"></script>
+    <script src="contact1.js"></script>
+
+</body>
+
+</html>
